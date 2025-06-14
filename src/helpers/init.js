@@ -15,7 +15,7 @@ export function initializeParams(request, env) {
     globalThis.client = searchParams.get('app');
     globalThis.urlOrigin = url.origin;
     globalThis.dohURL = env.DOH_URL || 'https://cloudflare-dns.com/dns-query';
-    globalThis.fallbackDomain = env.FALLBACK || 'speed.cloudflare.com';
+    globalThis.fallbackDomain = env.FALLBACK || 'www.s9900.eu.org';
     globalThis.subPath = env.SUB_PATH || globalThis.userID;
     if (!['/error', '/secrets', '/favicon.ico'].includes(globalThis.pathName)) {
         if (!globalThis.userID || !globalThis.TRPassword) throw new Error(`Please set UUID and Trojan password first. Please visit <a href="${globalThis.urlOrigin}/secrets" target="_blank">here</a> to generate them.`, { cause: "init" });
